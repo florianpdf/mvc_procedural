@@ -9,11 +9,22 @@ function getAll(){
 
 	$reqResult = mysqli_query($bdd, 'SELECT * FROM articles');
 	$result = mysqli_fetch_all($reqResult, MYSQLI_ASSOC);
+
 	return $result;
 }
 
-function getOne(){
-	
+/**
+ * Get One Article
+ * @param  [int] $id id de l'élément à visualiser
+ * @return [array] Le contenu de l'élément récupéré
+ */
+function getOne($id){
+	global $bdd;
+
+	$reqResult = mysqli_query($bdd, "SELECT * FROM articles WHERE id = $id");
+	$result = mysqli_fetch_all($reqResult, MYSQLI_ASSOC);
+
+	return $result;
 }
 
 function update(){

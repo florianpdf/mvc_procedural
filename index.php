@@ -2,14 +2,22 @@
 
 <?php
 
+// Base de donnée
 include ('model/bdd_user_info.php');
 include ('model/bdd_connexion.php');
 include ('model/bdd_functions.php');
-include ('controller/profil_controller.php');
+
+// Traitement PHP
+include ('controller/article_controller.php');
 
 if (empty($_GET)){
-	showAllProfils();
+	// Voir article_controller.php
+	showAllArticle();
 }
 elseif($_GET['section'] == 'add'){
 	include ('views/new_article.php');
+}
+elseif ($_GET['section'] == "showOne") {
+	// Voir article_controller.php
+	showOneArticle();
 }

@@ -1,6 +1,5 @@
 <?php include ('includes/header.php'); ?>
 
-
 <div class="container">
 	<div class="row">
 		<h1 class="mx-auto">Welcome to your World</h1>
@@ -24,6 +23,9 @@
 							<a href="#">
 								<img src="views/assets/pictures/ic_mode_edit_black_24px.svg" alt="edit">
 							</a>
+							<a href="index.php?section=showOne&id=<?php echo $value['id']; ?>">
+								show
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -32,7 +34,5 @@
 			
 	</div>
 </div>
-
-
 
 <?php include ('includes/footer.php'); ?>
